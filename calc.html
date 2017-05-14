@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>RPN Calculator</title>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<meta name="robots" content="none" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style>
+h3 {
+	text-align: center;
+}
+
+input {
+	inline-width: 100%;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h3>RPN Calculator</h3>
+				<table class="table table-condensed table-bordered">
+					<tr>
+						<td colspan="4"><input class="input-lg" type="text"
+							id="answer" value="0" /></td>
+					</tr>
+					<tr>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'7')">7</button></td>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'8')">8</button></td>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'9')">9</button></td>
+						<td><button class="btn-lg btn-default" onclick="operatorPressed('/')">/</button></td>
+					</tr>
+					<tr>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'4')">4</button></td>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'5')">5</button></td>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'6')">6</button></td>
+						<td><button class="btn-lg btn-default" onclick="operatorPressed('*')">*</button></td>
+					</tr>
+					<tr>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'1')">1</button></td>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'2')">2</button></td>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'3')">3</button></td>
+						<td><button class="btn-lg btn-default" onclick="operatorPressed('-')">-</button></td>
+					</tr>
+					<tr>
+						<td><button class="btn-lg btn-default"
+								onclick="digitPressed(
+								'0')">0</button></td>
+						<td><button class="btn-lg btn-default" onclick="digitPressed('.')">
+								<strong>.</strong>
+							</button></td>
+						<td><button class="btn-lg btn-default" disabled>E</button></td>
+						<td><button class="btn-lg btn-default" onclick="operatorPressed('+')">+</button></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button class="btn-lg btn-default" onclick="changeSign()">+/-</button></td>
+						<td colspan="2"><button class="btn-lg btn-success"
+								onclick="digitPressed(
+                '\n')">ENTER</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<script src="calc.js">
+								</script>
+</body>
+
+</html>
