@@ -32,6 +32,7 @@ function digitPressed(char) {
         else {
     		document.getElementById("answer").value = char;
     		numberEntered = false;
+        	document.getElementById("clearBtn").innerHTML = "CE";
         }
         break;
     case '.':
@@ -42,6 +43,7 @@ function digitPressed(char) {
     		else {
     			document.getElementById("answer").value = "0" + char;
     			numberEntered = false;
+    	    	document.getElementById("clearBtn").innerHTML = "CE";
     		}
     		decimalEntered = true;
     	}
@@ -50,6 +52,7 @@ function digitPressed(char) {
     	expressionStack.push(Number(document.getElementById("answer").value));
         decimalEntered = false;
         numberEntered = true;
+    	document.getElementById("clearBtn").innerHTML = "C";
         break;
     default:
         break;
@@ -57,6 +60,7 @@ function digitPressed(char) {
 }
 
 function changeSign() {
+	console.log("key " + "\'" + "+/-" + "\'" + " pressed.\n");
 	var inputValue = -1 * Number(document.getElementById("answer").value);
 	document.getElementById("answer").value = String(inputValue);
 }
@@ -71,6 +75,7 @@ function operatorPressed(char) {
 	expressionStack.push(char);
     decimalEntered = false;
     numberEntered = true;
+	document.getElementById("clearBtn").innerHTML = "C";
 	
 	if (expressionStack.length < 3) {
 		console.log("Bad math expression entered");
@@ -101,4 +106,15 @@ function operatorPressed(char) {
 	}
 	expressionStack.push(ans);
 	document.getElementById("answer").value = String(ans);
+}
+
+function clearPressed() {
+	console.log("key " + "\'" + "C" + "\'" + " pressed.\n");
+
+	if (numberEntered) {
+		expressionStack = [];
+	}
+	document.getElementById("answer").value = "0";
+	document.getElementById("clearBtn").innerHTML = "C";
+	numberEntered = true;
 }
