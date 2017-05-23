@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html" />
 <meta name="robots" content="none" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=deviCE-width, initial-scale=1" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
@@ -27,59 +27,59 @@ input {
 				<h3>RPN Calculator</h3>
 				<table class="table table-condensed table-bordered">
 					<tr>
-						<td colspan="4"><input class="input-lg" type="text"
+						<td colspan="4"><input class="input-lg form-control" type="text"
 							id="answer" value="0" /></td>
 					</tr>
 					<tr>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'7')">7</button></td>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'8')">8</button></td>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'9')">9</button></td>
-						<td><button class="btn-lg btn-default" onclick="operatorPressed('/')">/</button></td>
+						<td><button class="btn-lg btn-default btn-block" onclick="operatorPressed('/')">&divide;</button></td>
 					</tr>
 					<tr>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'4')">4</button></td>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'5')">5</button></td>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'6')">6</button></td>
-						<td><button class="btn-lg btn-default" onclick="operatorPressed('*')">*</button></td>
+						<td><button class="btn-lg btn-default btn-block" onclick="operatorPressed('*')">&times;</button></td>
 					</tr>
 					<tr>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'1')">1</button></td>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'2')">2</button></td>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'3')">3</button></td>
-						<td><button class="btn-lg btn-default" onclick="operatorPressed('-')">-</button></td>
+						<td><button class="btn-lg btn-default btn-block" onclick="operatorPressed('-')">&minus;</button></td>
 					</tr>
 					<tr>
-						<td><button class="btn-lg btn-default"
+						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'0')">0</button></td>
-						<td><button class="btn-lg btn-default" onclick="digitPressed('.')">
+						<td><button class="btn-lg btn-default btn-block" onclick="digitPressed('.')">
 								<strong>.</strong>
 							</button></td>
-						<td><button class="btn-lg btn-default" disabled>E</button></td>
-						<td><button class="btn-lg btn-default" onclick="operatorPressed('+')">+</button></td>
+						<td><button class="btn-lg btn-default btn-block" onclick="expPressed()">E</button></td>
+						<td><button class="btn-lg btn-default btn-block" onclick="operatorPressed('+')">&#43;</button></td>
 					</tr>
 					<tr>
-						<td><button id="clearBtn" class="btn-lg btn-default" onclick="clearPressed()">C</button></td>
-						<td><button class="btn-lg btn-default" onclick="changeSign()">+/-</button></td>
-						<td colspan="2"><button class="btn-lg btn-success"
+						<td><button id="clearBtn" class="btn-lg btn-default btn-block" onclick="clearPressed()">C</button></td>
+						<td><button class="btn-lg btn-default btn-block" onclick="changeSign()">&plusmn;</button></td>
+						<td colspan="2"><button class="btn-lg btn-success btn-block"
 								onclick="digitPressed(
                 '\n')">ENTER</button></td>
 					</tr>
