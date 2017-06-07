@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html" />
 <meta name="robots" content="none" />
-<meta name="viewport" content="width=deviCE-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
@@ -27,8 +27,8 @@ input {
 				<h3>RPN Calculator</h3>
 				<table class="table table-condensed table-bordered">
 					<tr>
-						<td colspan="4"><input class="input-lg form-control" type="text"
-							id="answer" value="0" /></td>
+						<td colspan="4"><input class="input-lg form-control"
+							type="text" id="answer" value="0" /></td>
 					</tr>
 					<tr>
 						<td><button class="btn-lg btn-default btn-block"
@@ -40,7 +40,8 @@ input {
 						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'9')">9</button></td>
-						<td><button class="btn-lg btn-default btn-block" onclick="operatorPressed('/')">&divide;</button></td>
+						<td><button class="btn-lg btn-default btn-block"
+								onclick="operatorPressed('/')">&divide;</button></td>
 					</tr>
 					<tr>
 						<td><button class="btn-lg btn-default btn-block"
@@ -52,7 +53,8 @@ input {
 						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'6')">6</button></td>
-						<td><button class="btn-lg btn-default btn-block" onclick="operatorPressed('*')">&times;</button></td>
+						<td><button class="btn-lg btn-default btn-block"
+								onclick="operatorPressed('*')">&times;</button></td>
 					</tr>
 					<tr>
 						<td><button class="btn-lg btn-default btn-block"
@@ -64,35 +66,52 @@ input {
 						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'3')">3</button></td>
-						<td><button class="btn-lg btn-default btn-block" onclick="operatorPressed('-')">&minus;</button></td>
+						<td><button class="btn-lg btn-default btn-block"
+								onclick="operatorPressed('-')">&minus;</button></td>
 					</tr>
 					<tr>
 						<td><button class="btn-lg btn-default btn-block"
 								onclick="digitPressed(
 								'0')">0</button></td>
-						<td><button class="btn-lg btn-default btn-block" onclick="digitPressed('.')">
+						<td><button class="btn-lg btn-default btn-block"
+								onclick="digitPressed('.')">
 								<strong>.</strong>
 							</button></td>
-						<td><button class="btn-lg btn-default btn-block" onclick="expPressed()">E</button></td>
-						<td><button class="btn-lg btn-default btn-block" onclick="operatorPressed('+')">&#43;</button></td>
+						<td><button class="btn-lg btn-default btn-block"
+								onclick="changeSign()">&plusmn;</button></td>
+						<td><button class="btn-lg btn-default btn-block"
+								onclick="operatorPressed('+')">&#43;</button></td>
 					</tr>
 					<tr>
-						<td><button id="clearBtn" class="btn-lg btn-default btn-block" onclick="clearPressed()">C</button></td>
-						<td><button class="btn-lg btn-default btn-block" onclick="changeSign()">&plusmn;</button></td>
+						<td><button id="clearBtn"
+								class="btn-lg btn-default btn-block" onclick="clearPressed()">C</button></td>
+						<td><button class="btn-lg btn-default btn-block"
+								onclick="expPressed()">E</button></td>
+
 						<td colspan="2"><button class="btn-lg btn-success btn-block"
 								onclick="digitPressed(
                 '\n')">ENTER</button></td>
+					</tr>
+					<tr>
+						<td><button id="randBtn" class="btn-lg btn-default btn-block"
+								onclick="rand()">rand</button></td>
+						<td><button id="intBtn" class="btn-lg btn-default btn-black"
+								onclick="int()">int</button></td>
+						<td colspan="2"><button class="btn-lg btn-default btn-block"
+								onclick="randInt()">randInt</button></td>
 					</tr>
 				</table>
 			</div>
 		</div>
 	</div>
 
-  <script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script
-    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="calc.js"> </script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="calc.js">
+		
+	</script>
 </body>
 
 </html>

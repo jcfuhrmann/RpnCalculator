@@ -10,6 +10,7 @@ var expMode = false;
 function digitPressed(char) {
 	console.log("key " + "\'" + char + "\'" + " pressed.\n");
 	console.log("char is Integer? " + Number.isInteger(Number(char)));
+	console.log("Number entered mode: " + numberEntered);
     if (expMode && Number.isInteger(Number(char))) {
     	document.getElementById("answer").value += char;
     	var str = document.getElementById("answer").value;
@@ -21,10 +22,7 @@ function digitPressed(char) {
     	document.getElementById("answer").value = String(numeric * Math.pow(10, powerOfTen));
     	console.log("answer = " + document.getElementById("answer").value);
     	expressionStack.push(Number(document.getElementById("answer").value));
-        decimalEntered = false;
-        numberEntered = true;
-    	expMode = false;
-    	document.getElementById("clearBtn").innerHTML = "C";
+        closeEntry();
     }
     else {
 		switch (char) {
@@ -78,10 +76,7 @@ function digitPressed(char) {
 	    	else {
 		    	expressionStack.push(Number(document.getElementById("answer").value));
 	    	}
-		    decimalEntered = false;
-	        numberEntered = true;
-	        expMode = false;
-	    	document.getElementById("clearBtn").innerHTML = "C";
+		    closeEntry();
 	        break;
 	    default:
 	        break;
@@ -118,9 +113,7 @@ function operatorPressed(char) {
 		expressionStack.push(Number(document.getElementById("answer").value));
 	}
 	expressionStack.push(char);
-    decimalEntered = false;
-    numberEntered = true;
-	document.getElementById("clearBtn").innerHTML = "C";
+    closeEntry();
 	
 	if (expressionStack.length < 3) {
 		console.log("Bad math expression entered");
@@ -160,10 +153,7 @@ function clearPressed() {
 		expressionStack = [];
 	}
 	document.getElementById("answer").value = "0";
-	document.getElementById("clearBtn").innerHTML = "C";
-	numberEntered = true;
-	decimalEntered = false;
-	expMode = false;
+	closeEntry();
 }
 
 function expPressed() {
@@ -171,4 +161,33 @@ function expPressed() {
 	
 	expMode = true;
 	document.getElementById("answer").value += 'e+';
+}
+
+function rand() {
+	console.log("key " + "rand" + " pressed.\n");
+	document.getElementById("answer").value = String(Math.random());
+	closeEntry();
+}
+
+function int() {
+	console.log("key " + "int" + " pressed.\n");
+	num = Number(document.getElementById("answer").value);
+	truncatedNum = Math.floor(num);
+	document.getElementById("answer").value = String(truncatedNum);
+	closeEntry();
+}
+
+function randInt() {
+	console.log("key " + "rand ##" + " pressed.\n");
+	range = Math.floor(Number(document.getElementById("answer").value));
+	newRandNum = Math.floor(range * Math.random() + 1);
+	document.getElementById("answer").value = String(newRandNum);
+	closeEntry();
+}
+
+function closeEntry() {
+	numberEntered = true;
+	decimalEntered = false;
+	expMode = false;
+	document.getElementById("clearBtn").innerHTML = "C";
 }
